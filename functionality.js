@@ -1,3 +1,14 @@
+const one = document.querySelector(".one");
+const numberButtons = document.querySelectorAll("[data-number");
+const operationButtons = document.querySelectorAll("[data-operation");
+const equalsButton = document.querySelector("[data-equals]");
+const clearButton = document.querySelector("[data-clear]");
+const deleteButton = document.querySelector("[data-delete]");
+const previousValueTextElement = document.querySelector(
+  "[data-previous-value]"
+);
+const currentValueTextElement = document.querySelector("[data-current-value]");
+
 class Calculator {
   constructor(previousValueTextElement, currentValueTextElement) {
     this.previousValueTextElement = previousValueTextElement;
@@ -114,14 +125,3 @@ deleteButton.addEventListener("click", () => {
   calculator.deleteValue();
   calculator.updateDisplay();
 });
-
-const one = document.querySelector(".one");
-const numberButtons = document.querySelectorAll("[data-number");
-const operationButtons = document.querySelectorAll("[data-operation");
-const equalsButton = document.querySelector("[data-equals]");
-const clearButton = document.querySelector("[data-clear]");
-const deleteButton = document.querySelector("[data-delete]");
-const previousValueTextElement = document.querySelector(
-  "[data-previous-value]"
-);
-const currentValueTextElement = document.querySelector("[data-current-value]");
