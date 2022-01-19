@@ -3,22 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  // background-color: #50526b;
 }
+
 section {
   width: 25%;
-  min-height: 60%;
   min-width: 404px;
   box-shadow: 3px 3px 5px rgb(75, 74, 74);
+
   .output {
     background-color: rgba(0, 0, 0, 0.7);
-    height: 160px;
+    height: 167px;
     text-align: right;
     font-size: 1.8rem;
     font-family: Arial;
@@ -43,14 +45,11 @@ section {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    // align-items: center;
-    // justify-content: center;
     background-color: rgba(1, 1, 1, 0.75);
     button {
       height: 100px;
       width: 24%;
       font-size: 2rem;
-      // margin: 2px;
       background-color: #30336b;
       border: 1px solid rgba(85, 88, 145, 0.75);
       color: white;
@@ -65,5 +64,12 @@ section {
     button:hover {
       background-color: #454770;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  section {
+    width: 100%;
+    min-width: 200px;
   }
 }

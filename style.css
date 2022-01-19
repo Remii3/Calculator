@@ -1,52 +1,76 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   height: 100vh;
   min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 section {
   width: 25%;
-  min-height: 60%;
   min-width: 404px;
-  box-shadow: 3px 3px 5px #4b4a4a;
+  -webkit-box-shadow: 3px 3px 5px #4b4a4a;
+          box-shadow: 3px 3px 5px #4b4a4a;
 }
+
 section .output {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 160px;
+  height: 167px;
   text-align: right;
   font-size: 1.8rem;
   font-family: Arial;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px;
   word-wrap: break-word;
   word-break: break-all;
 }
+
 section .output .previousValue {
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.75);
 }
+
 section .output .currentValue {
   font-size: 2rem;
   color: white;
 }
+
 section .buttons {
   height: 70%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: rgba(1, 1, 1, 0.75);
 }
+
 section .buttons button {
   height: 100px;
   width: 24%;
@@ -54,14 +78,27 @@ section .buttons button {
   background-color: #30336b;
   border: 1px solid rgba(85, 88, 145, 0.75);
   color: white;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
+
 section .buttons button:nth-child(1) {
   width: calc(48% + 4px);
 }
+
 section .buttons button:nth-child(18) {
   width: calc(48% + 4px);
 }
+
 section .buttons button:hover {
   background-color: #454770;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@media (max-width: 400px) {
+  section {
+    width: 100%;
+    min-width: 200px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
