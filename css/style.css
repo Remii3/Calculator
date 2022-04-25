@@ -7,6 +7,7 @@
 
 body {
   min-height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +52,7 @@ body {
   background-color: #30336b;
   border: 1px solid rgba(85, 88, 145, 0.75);
   color: #fff;
+  cursor: pointer;
 }
 .wrapper .wrapper_buttonsSpace button:nth-child(1) {
   grid-column-start: 1;
@@ -67,5 +69,12 @@ body {
   .wrapper .wrapper_buttonsSpace {
     grid-template-columns: repeat(4, minmax(80px, 1fr));
     grid-template-rows: repeat(5, minmax(80px, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  section {
+    width: 100%;
+    min-width: 200px;
   }
 }/*# sourceMappingURL=style.css.map */
