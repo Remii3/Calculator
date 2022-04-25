@@ -25,10 +25,12 @@ class Calculator {
   deleteValue = function () {
     this.currentValue = this.currentValue.toString().slice(0, -1);
   };
+
   appendNumber = function (number) {
     if (number === "." && this.currentValue.includes(".")) return;
     this.currentValue = this.currentValue.toString() + number.toString();
   };
+
   chooseOperation = function (operation) {
     if (this.currentValue === "") return;
     if (this.previousValue !== "") {
@@ -38,6 +40,7 @@ class Calculator {
     this.previousValue = this.currentValue;
     this.currentValue = "";
   };
+
   compute = function () {
     let computation;
     const prev = parseFloat(this.previousValue);
@@ -59,15 +62,18 @@ class Calculator {
       default:
         return;
     }
+
     this.currentValue = computation;
     this.operation = undefined;
     this.previousValue = "";
   };
+
   getDisplayNumber(number) {
     const stringNumber = number.toString();
     const integerDigits = parseFloat(stringNumber.split(".")[0]);
     const decimalDigits = stringNumber.split(".")[1];
     let integerDisplay;
+
     if (isNaN(integerDigits)) {
       integerDisplay = "";
     } else {
@@ -75,6 +81,7 @@ class Calculator {
         maximumFractionDigits: 0,
       });
     }
+
     if (decimalDigits != null) {
       return `${integerDisplay}.${decimalDigits}`;
     } else {
@@ -107,20 +114,24 @@ numberButtons.forEach((button) => {
     calculator.updateDisplay();
   });
 });
+
 operationButtons.forEach((button) => {
   button.addEventListener("click", () => {
     calculator.chooseOperation(button.innerText);
     calculator.updateDisplay();
   });
 });
+
 equalsButton.addEventListener("click", () => {
   calculator.compute();
   calculator.updateDisplay();
 });
+
 clearButton.addEventListener("click", () => {
   calculator.clear();
   calculator.updateDisplay();
 });
+
 deleteButton.addEventListener("click", () => {
   calculator.deleteValue();
   calculator.updateDisplay();

@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  box-shadow: 1.5px 2px 5px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 400px;
+}
+.wrapper_output {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 160px;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.wrapper_output .output_previousValue {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+.wrapper_output .output_currentValue {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+.wrapper .wrapper_buttonsSpace {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(60px, 1fr));
+  grid-template-rows: repeat(5, minmax(60px, 1fr));
+}
+.wrapper .wrapper_buttonsSpace button {
+  padding: 8%;
+  text-align: center;
+  font-size: 1.7rem;
+  background-color: #30336b;
+  border: 1px solid rgba(85, 88, 145, 0.75);
+  color: #fff;
+}
+.wrapper .wrapper_buttonsSpace button:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.wrapper .wrapper_buttonsSpace button:nth-child(18) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.wrapper .wrapper_buttonsSpace button:hover {
+  background-color: #454770;
+}
+@media screen and (min-width: 600px) {
+  .wrapper .wrapper_buttonsSpace {
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    grid-template-rows: repeat(5, minmax(80px, 1fr));
+  }
+}/*# sourceMappingURL=style.css.map */
